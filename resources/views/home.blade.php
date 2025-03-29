@@ -44,30 +44,36 @@
             padding-bottom: 10px;
             margin-bottom: 30px;
         }
-        .img-container {
-            background: #f8f9fa;
-            padding: 15px;
+        .code-image {
+            background: #1e1e1e;
+            padding: 0;
             border-radius: 8px;
             margin: 15px 0;
-            text-align: center;
+            overflow: hidden;
         }
-        .img-container img {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #dee2e6;
-            border-radius: 4px;
+        .code-image img {
+            width: 100%;
+            display: block;
         }
         .img-caption {
             font-size: 0.9rem;
             color: #6c757d;
             margin-top: 8px;
+            text-align: center;
+        }
+        .terminal-image {
+            background: #000;
+            border-radius: 8px;
+            padding: 0;
+            margin: 15px 0;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
     <div class="container py-5">
         <div class="text-center mb-5">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="Laravel Logo" class="laravel-logo">
+            <img src="https://via.placeholder.com/400x200/FF2D20/FFFFFF?text=Laravel+Logo" alt="Laravel Logo" class="laravel-logo">
             <h1 class="display-4">Laravel Installation & API Guide</h1>
             <p class="lead">A step-by-step tutorial for beginners</p>
         </div>
@@ -92,11 +98,10 @@
                                 <li>MySQL or other database system</li>
                                 <li>Web server (Apache/Nginx) or use Laravel's built-in server</li>
                             </ul>
-                            <div class="img-container">
-                                <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2022/08/laravel-system-requirements.webp" alt="Laravel prerequisites">
-                                <div class="img-caption">Laravel system requirements</div>
+                            <div class="terminal-image">
+                                <img src="https://carbon.now.sh/embed?bg=rgba(0,0,0,1)&t=seti&wt=none&l=application/x-sh&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=php%2520-v%250A%250Acomposer%2520--version" alt="Terminal commands">
                             </div>
-                            <p>You can check PHP version with <code>php -v</code> and Composer with <code>composer --version</code>.</p>
+                            <p class="img-caption">Checking PHP and Composer versions</p>
                         </div>
                     </div>
                 </div>
@@ -113,11 +118,10 @@
                             <div class="api-example">
                                 composer create-project laravel/laravel my-laravel-app
                             </div>
-                            <div class="img-container">
-                                <img src="https://www.positronx.io/wp-content/uploads/2020/04/laravel-composer-create-project-command.jpg" alt="Composer installation">
-                                <div class="img-caption">Creating Laravel project with Composer</div>
+                            <div class="terminal-image">
+                                <img src="https://carbon.now.sh/embed?bg=rgba(0,0,0,1)&t=seti&wt=none&l=application/x-sh&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=composer%2520create-project%2520laravel%252Flaravel%2520my-laravel-app" alt="Composer command">
                             </div>
-                            <p>This will create a new directory called "my-laravel-app" with all Laravel files.</p>
+                            <p class="img-caption">Installing Laravel via Composer</p>
                         </div>
                     </div>
                 </div>
@@ -136,19 +140,10 @@
                                 <li>Generate application key: <code>php artisan key:generate</code></li>
                                 <li>Configure database settings in <code>.env</code> file</li>
                             </ol>
-                            <div class="img-container">
-                                <img src="https://www.itsolutionstuff.com/upload/laravel/laravel-env-file-example.png" alt="Environment configuration">
-                                <div class="img-caption">Laravel .env file configuration</div>
+                            <div class="code-image">
+                                <img src="https://carbon.now.sh/embed?bg=rgba(30,30,30,1)&t=material&wt=none&l=properties&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=APP_NAME%253DLaravel%250AAPP_ENV%253Dlocal%250AAPP_KEY%253Dbase64%253Asomerandomstring%253D%253D%250AAPP_DEBUG%253Dtrue%250A%250ADB_CONNECTION%253Dmysql%250ADB_HOST%253D127.0.0.1%250ADB_PORT%253D3306%250ADB_DATABASE%253Dlaravel%250ADB_USERNAME%253Droot%250ADB_PASSWORD%253D" alt=".env file">
                             </div>
-                            <p>Example database configuration:</p>
-                            <div class="api-example">
-                                DB_CONNECTION=mysql<br>
-                                DB_HOST=127.0.0.1<br>
-                                DB_PORT=3306<br>
-                                DB_DATABASE=laravel<br>
-                                DB_USERNAME=root<br>
-                                DB_PASSWORD=
-                            </div>
+                            <p class="img-caption">Example .env file configuration</p>
                         </div>
                     </div>
                 </div>
@@ -165,16 +160,10 @@
                             <div class="api-example">
                                 php artisan serve
                             </div>
-                            <div class="img-container">
-                                <img src="https://www.positronx.io/wp-content/uploads/2020/04/laravel-artisan-serve-command.jpg" alt="Artisan serve">
-                                <div class="img-caption">Running Laravel development server</div>
+                            <div class="terminal-image">
+                                <img src="https://carbon.now.sh/embed?bg=rgba(0,0,0,1)&t=seti&wt=none&l=application/x-sh&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=php%2520artisan%2520serve%250A%250AServer%2520started%2520on%2520http%253A%252F%252Flocalhost%253A8000" alt="Artisan serve">
                             </div>
-                            <p>This will start a server at <a href="http://localhost:8000" target="_blank">http://localhost:8000</a>.</p>
-                            <p>You should see the Laravel welcome page:</p>
-                            <div class="img-container">
-                                <img src="https://laravel-courses.com/storage/series/55/8f6d7a1c-5a5c-4e0e-9f5a-7d0e8a6b5b5a.png" alt="Laravel welcome page">
-                                <div class="img-caption">Laravel welcome screen</div>
-                            </div>
+                            <p class="img-caption">Starting Laravel development server</p>
                         </div>
                     </div>
                 </div>
@@ -201,10 +190,10 @@
                                 <li><strong>Models</strong>: Interact with database</li>
                                 <li><strong>Resources</strong>: Transform data for API responses</li>
                             </ul>
-                            <div class="img-container">
-                                <img src="https://www.nicesnippets.com/upload/blog/1588674600laravel-api.png" alt="API flow">
-                                <div class="img-caption">Laravel API architecture</div>
+                            <div class="code-image">
+                                <img src="https://carbon.now.sh/embed?bg=rgba(30,30,30,1)&t=material&wt=none&l=php&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250Ause%2520Illuminate%2520Http%2520Request%253B%250Ause%2520App%2520Http%2520Controllers%2520Controller%253B%250Ause%2520App%2520Models%2520Post%253B%250A%250Aclass%2520PostController%2520extends%2520Controller%250A%257B%250A%2520%2520public%2520function%2520index()%250A%2520%2520%257B%250A%2520%2520%2520%2520return%2520Post%253A%253Aall()%253B%250A%2520%2520%257D%250A%257D" alt="Controller example">
                             </div>
+                            <p class="img-caption">Basic API controller structure</p>
                         </div>
                     </div>
                 </div>
@@ -218,20 +207,10 @@
                                 <h5 class="card-title mb-0">Creating API Routes</h5>
                             </div>
                             <p class="card-text">Define routes in <code>routes/api.php</code>:</p>
-                            <div class="api-example">
-                                // Basic GET route<br>
-                                Route::get('/posts', function () {<br>
-                                &nbsp;&nbsp;return response()->json(['message' => 'List of posts']);<br>
-                                });<br><br>
-                                
-                                // Resource route<br>
-                                Route::apiResource('posts', PostController::class);
+                            <div class="code-image">
+                                <img src="https://carbon.now.sh/embed?bg=rgba(30,30,30,1)&t=material&wt=none&l=php&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%253Fphp%250A%250Ause%2520Illuminate%2520Support%2520Facades%2520Route%253B%250Ause%2520App%2520Http%2520Controllers%2520PostController%253B%250A%250ARoute%253A%253Aget('%252Fposts'%252C%2520%255BPostController%253A%253Aclass%252C%2520'index'%255D)%253B%250ARoute%253A%253Apost('%252Fposts'%252C%2520%255BPostController%253A%253Aclass%252C%2520'store'%255D)%253B%250ARoute%253A%253AapiResource('posts'%252C%2520PostController%253A%253Aclass)%253B" alt="Route definitions">
                             </div>
-                            <p>API routes are automatically prefixed with <code>/api</code>.</p>
-                            <div class="img-container">
-                                <img src="https://www.itsolutionstuff.com/upload/laravel/laravel-8-api-authentication-with-sanctum-tutorial.png" alt="Route groups">
-                                <div class="img-caption">API route examples</div>
-                            </div>
+                            <p class="img-caption">API route definitions</p>
                         </div>
                     </div>
                 </div>
@@ -245,24 +224,10 @@
                                 <h5 class="card-title mb-0">Creating a Controller</h5>
                             </div>
                             <p class="card-text">Generate a controller with Artisan:</p>
-                            <div class="api-example">
-                                php artisan make:controller PostController --api
+                            <div class="terminal-image">
+                                <img src="https://carbon.now.sh/embed?bg=rgba(0,0,0,1)&t=seti&wt=none&l=application/x-sh&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=php%2520artisan%2520make%253Acontroller%2520PostController%2520--api" alt="Artisan command">
                             </div>
-                            <p>This creates a controller with RESTful methods:</p>
-                            <div class="api-example">
-                                class PostController extends Controller<br>
-                                {<br>
-                                &nbsp;&nbsp;public function index() { /* GET /api/posts */ }<br>
-                                &nbsp;&nbsp;public function store(Request $request) { /* POST /api/posts */ }<br>
-                                &nbsp;&nbsp;public function show($id) { /* GET /api/posts/{id} */ }<br>
-                                &nbsp;&nbsp;public function update(Request $request, $id) { /* PUT/PATCH /api/posts/{id} */ }<br>
-                                &nbsp;&nbsp;public function destroy($id) { /* DELETE /api/posts/{id} */ }<br>
-                                }
-                            </div>
-                            <div class="img-container">
-                                <img src="https://www.itsolutionstuff.com/upload/laravel/laravel-controller-tutorial-example-from-scratch.png" alt="Controller example">
-                                <div class="img-caption">API Controller structure</div>
-                            </div>
+                            <p class="img-caption">Generating an API controller</p>
                         </div>
                     </div>
                 </div>
@@ -281,15 +246,10 @@
                                 <li>cURL</li>
                                 <li>Laravel's built-in HTTP tests</li>
                             </ul>
-                            <p>Example cURL command:</p>
-                            <div class="api-example">
-                                curl -X GET http://localhost:8000/api/posts
+                            <div class="terminal-image">
+                                <img src="https://carbon.now.sh/embed?bg=rgba(0,0,0,1)&t=seti&wt=none&l=application/x-sh&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=48px&ph=32px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=curl%2520-X%2520GET%2520http%253A%252F%252Flocalhost%253A8000%252Fapi%252Fposts%250A%250A%257B%250A%2520%2520%2522data%2522%253A%2520%255B%250A%2520%2520%2520%2520%257B%250A%2520%2520%2520%2520%2520%2520%2522id%2522%253A%25201%252C%250A%2520%2520%2520%2520%2520%2520%2522title%2522%253A%2520%2522First%2520Post%2522%250A%2520%2520%2520%2520%257D%250A%2520%2520%255D%250A%257D" alt="API response">
                             </div>
-                            <div class="img-container">
-                                <img src="https://www.positronx.io/wp-content/uploads/2020/04/laravel-api-test-with-postman.jpg" alt="Postman testing">
-                                <div class="img-caption">Testing API with Postman</div>
-                            </div>
-                            <p>Laravel also provides <code>php artisan route:list</code> to see all routes.</p>
+                            <p class="img-caption">Testing API endpoint with cURL</p>
                         </div>
                     </div>
                 </div>
