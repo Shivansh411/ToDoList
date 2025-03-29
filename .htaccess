@@ -1,17 +1,10 @@
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-
-    # Ensure the request is not for an existing file or directory
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.php/$1 [L]
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/public/ 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /public/$1 
+#RewriteRule ^ index.php [L]
+RewriteRule ^(/)?$ public/index.php [L] 
 </IfModule>
-
-# Security: Disable directory listing
-Options -Indexes
-
-# Protect the .env file from public access
-<Files .env>
-    Order allow,deny
-    Deny from all
-</Files>
