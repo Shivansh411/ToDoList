@@ -87,7 +87,7 @@
 
     <section class="hero">
         <div class="container text-center">
-            <h1>Welcome Ankit</h1>
+            <h1>Welcome Amit</h1>
             <p>Your Digital Future Starts Here</p>
             <a href="#" class="btn btn-primary btn-lg">Get Started</a>
         </div>
